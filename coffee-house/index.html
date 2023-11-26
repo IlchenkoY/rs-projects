@@ -6,75 +6,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee-House</title>
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" />
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@400;700&display=swap"
         rel="stylesheet">
-    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-        <div>
-            <nav>
+    <header class="header">
+        <div class="container">
+            <div class="header__menu">
                 <a href="index.html">
-                    <svg>
-                        <use></use>
+                    <svg class="logo" width="100" height="60">
+                        <use href="./images/logo.svg#icon-logo"></use>
                     </svg>
                 </a>
-                <ul>
-                    <li>Favorite coffee</li>
-                    <li>About</li>
-                    <li>Mobile app</li>
-                    <li>Contact us</li>
-                </ul>
-            </nav>
-            <a href="/">Menu
-                <svg>
-                    <use></use>
-                </svg>
-            </a>
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-list-item">Favorite coffee</li>
+                        <li class="header__nav-list-item">About</li>
+                        <li class="header__nav-list-item">Mobile app</li>
+                        <li class="header__nav-list-item">Contact us</li>
+                    </ul>
+                </nav>
+                <a class="header__menu-link" href="/">Menu
+                    <svg class="header__menu-link-img" width="20" height="20">
+                        <use href="./images/sprite.svg#icon-coffee-cup"></use>
+                    </svg>
+                </a>
+            </div>
         </div>
     </header>
     <main>
         <!--HERO-->
-        <section>
-            <div>
-                <h1><span>Enjoy</span> premium coffee at our charming cafe</h1>
-                <p>With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular
-                    destination for coffee
-                    lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</p>
-                <a href="index.html">Menu</a>
+        <section class="hero">
+            <div class="container">
+                <div class="hero__wrapper">
+                    <h1 class="hero__title"><span class="hero__title--italic">Enjoy</span> premium coffee at our
+                        charming cafe
+                    </h1>
+                    <p class="hero__description">With its inviting atmosphere and delicious coffee options, the Coffee
+                        House Resource is a popular
+                        destination for coffee
+                        lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</p>
+                    <a class="hero__menu-link" href="index.html">Menu</a>
+                </div>
             </div>
         </section>
-        <div>
-            <h2>Choose your <span>favorite</span> coffee</h2>
-            <button type="button"></button>
-            <div>
-                <img src="" alt="">
-                <p></p>
-                <p></p>
-                <p></p>
-            </div>
-        </div>
         <!--FAVORITE COFFEE-->
-        <section>
-            <div></div>
+        <section class="favorite-coffee">
+            <div class="container">
+                <h2 class="favorite-coffee__title">Choose your <span
+                        class="favorite-coffee__title--italic">favorite</span> coffee</h2>
+                <div class="favorite-coffee__wrapper">
+                    <button type="button"></button>
+                    <div class="favorite-coffee__card">
+                        <img class="favorite-coffee__card-img" src="images/favorite-coffee/coffee-slider-1.png"
+                            alt="favorite coffee">
+                        <p>S’mores Frappuccino</p>
+                        <p>This new drink takes an espresso and mixes it with brown sugar and cinnamon before being
+                            topped
+                            with
+                            oat milk.</p>
+                        <p>$5.50</p>
+                    </div>
+                    <button type="button"></button>
+                </div>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
         </section>
         <!--ABOUT-->
         <section>
-            <div></div>
+            <div class="container">
+                <h2>Resource is <span>the perfect and cozy place</span> where you can enjoy a variety of hot beverages,
+                    relax,
+                    catch up with friends, or
+                    get some work done.</h2>
+                <div>
+                    <ul>
+                        <li>
+                            <img src="" alt="">
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                        </li>
+                        <li>
+                            <img src="" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
         <!--OUR APP-->
         <section>
-            <div></div>
+            <div class="container">
+                <h2><span>Download</span> our apps to start ordering</h2>
+                <p>Download the Resource app today and experience the comfort of ordering your favorite coffee from
+                    wherever you are</p>
+                <ul>
+                    <li>
+                        <a href="">
+                            <svg>
+                                <use></use>
+                            </svg>
+                            <p>Available on the</p>
+                            <p>App Store</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <svg>
+                                <use></use>
+                            </svg>
+                            <p>Available on the</p>
+                            <p>Google Play</p>
+                        </a>
+                    </li>
+                </ul>
+                <img src="" alt="">
+            </div>
         </section>
     </main>
     <footer>
-        <div></div>
+        <div class="container">
+            <h2><span>Sip, Savor, Smile. </span>It’s coffee time!</h2>
+            <ul>
+                <li>
+                    <a href="">
+                        <svg>
+                            <use></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <svg>
+                            <use></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <svg>
+                            <use></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <p>Contact us</p>
+            <address>
+                <ul>
+                    <li>
+                        <svg>
+                            <use></use>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg>
+                            <use></use>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg>
+                            <use></use>
+                        </svg>
+                    </li>
+                </ul>
+            </address>
+        </div>
     </footer>
 </body>
 

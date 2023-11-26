@@ -1,5 +1,5 @@
 :root {
-  --text-dark-color: #403f3d;
+  --text-dark: #403f3d;
   --text-light: #e1d4c9;
   --text-accent: #b0907a;
   --background-body: #e1d4c9;
@@ -10,42 +10,29 @@
   --main-font: "Inter", sans-serif;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+/*============RESET============*/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
 * {
   margin: 0;
   padding: 0;
   border: 0 solid transparent;
 }
-
 html {
   -webkit-text-size-adjust: 100%;
 }
-
 body {
   min-height: 100vh;
   line-height: 1;
   text-rendering: optimizeSpeed;
   font-family: var(--main-font);
+  font-weight: 600;
+  background-color: var(--background-body);
+  padding-top: 20px;
 }
-
-img,
-svg,
-video,
-canvas,
-audio,
-iframe,
-embed,
-object {
-  display: block;
-  max-width: 100%;
-}
-
 input,
 button,
 textarea,
@@ -54,19 +41,19 @@ select {
   line-height: inherit;
   color: inherit;
 }
-
+img {
+  display: block;
+}
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
 a {
   cursor: pointer;
   color: inherit;
   text-decoration: inherit;
   -webkit-tap-highlight-color: transparent;
 }
-
 h1,
 h2,
 h3,
@@ -76,12 +63,118 @@ h6 {
   font-size: inherit;
   font-weight: inherit;
 }
-
 ol,
 ul {
   list-style: none;
 }
-
+svg:not(.logo) {
+  stroke: #403f3d;
+}
 ::-moz-placeholder {
   opacity: 1;
 }
+/*============BASE============*/
+.container {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+/*============HEADER============*/
+.header {
+  margin-bottom: 20px;
+}
+.header__nav-list {
+  display: flex;
+}
+.header__nav-list-item {
+  font-family: Inter;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.header__nav-list-item:not(:last-child) {
+  margin-right: 40px;
+}
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__menu-link {
+  display: flex;
+  align-items: center;
+}
+.header__menu-link-img {
+  margin-left: 8px;
+}
+/*============HERO============*/
+.hero {
+  margin-bottom: 100px;
+}
+.hero__wrapper {
+  background-image: url(images/hero-desktop/img-hero.jpg);
+  background-repeat: no-repeat;
+  height: 644px;
+  border-radius: 40px;
+  padding: 100px;
+}
+.hero__title {
+  font-size: 72px;
+  line-height: 1.05;
+  max-width: 530px;
+  margin-bottom: 40px;
+  color: var(--text-light);
+}
+.hero__title--italic {
+  font-style: italic;
+  color: var(--text-accent);
+}
+.hero__description {
+  max-width: 530px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  color: var(--text-light);
+}
+.hero__menu-link {
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  width: 200px;
+  padding: 20px 78px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background-color: var(--background-body);
+}
+/*============FAVORITE COFFEE============*/
+.favorite-coffee {
+  margin-bottom: 100px;
+}
+.favorite-coffee__title {
+  font-size: 60px;
+  line-height: 1.25;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--text-dark);
+}
+.favorite-coffee__title--italic {
+  font-style: italic;
+  color: var(--text-accent);
+}
+.favorite-coffee__card {
+  width: 480px;
+  margin: 0 auto;
+}
+.favorite-coffee__wrapper {
+  display: flex;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.favorite-coffee__card-img {
+  margin-bottom: 20px;
+}
+/*============ABOUT============*/
+/*============OUR APP============*/
+/*============FOOTER============*/
+/*============MENU > COFFEE============*/
