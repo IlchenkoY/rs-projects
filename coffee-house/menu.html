@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee-House</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__menu">
+                <a href="index.html">
+                    <svg class="logo" width="100" height="60">
+                        <use href="./images/logo.svg#icon-logo"></use>
+                    </svg>
+                </a>
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-list-item">
+                            <a href="#slider">Favorite coffee</a>
+                        </li>
+                        <li class="header__nav-list-item">
+                            <a href="#about">About</a>
+                        </li>
+                        <li class="header__nav-list-item">
+                            <a href="#app">Mobile app</a>
+                        </li>
+                        <li class="header__nav-list-item">
+                            <a href="#contacts">Contact us</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a class="header__menu-link" href="/">Menu
+                    <svg class="header__menu-link-img" width="20" height="20">
+                        <use href="./images/sprite.svg#icon-coffee-cup"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="filter">
+            <div class="container">
+                <div class="filter__wrapper">
+                    <h1 class="filter__title">Behind each of our cups hides an <span
+                            class="filter__title--italic">amazing
+                            surprise</span></h1>
+                    <ul class="filter__oder-list">
+                        <li class="filter__oder-list-item">
+                            <button class="filter__btn filter__btn--current" type="button">
+                                <div class="filter__oder-list-icon filter__oder-list-icon--current"></div>
+                                <p
+                                    class="filter__oder-list-item-description filter__oder-list-item-description--current">
+                                    Coffee</p>
+                            </button>
+                        </li>
+                        <li class="filter__oder-list-item">
+                            <button class="filter__btn" type="button">
+                                <div class="filter__oder-list-icon"></div>
+                                <p class="filter__oder-list-item-description">Tea</p>
+                            </button>
+                        </li>
+                        <li class="filter__oder-list-item">
+                            <button class="filter__btn" type="button">
+                                <div class="filter__oder-list-icon"></div>
+                                <p class="filter__oder-list-item-description">Dessert</p>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="menu">
+            <div class="container">
+                <ul class="menu__list">
+                    <li class="menu__list-item">
+                        <div class="menu__img-wrapper">
+                            <img class="menu__list-item-img" src="images/coffee/coffee-1.jpg" alt="Irish coffee">
+                        </div>
+                        <div class="menu__list-item-description-wrapper">
+                            <p class="menu__list-iten-title">Irish coffee</p>
+                            <p class="menu__list-iten-description">Fragrant black coffee with Jameson Irish whiskey and
+                                whipped
+                                milk</p>
+                            <p class="menu__list-iten-price">$7.00</p>
+                        </div>
+                    </li>
+                    <li class="menu__list-item">
+                        <div class="menu__img-wrapper">
+                            <img class="menu__list-item-img" src="images/coffee/coffee-2.jpg" alt="Kahlua coffee">
+                        </div>
+                        <div class="menu__list-item-description-wrapper">
+                            <p class="menu__list-iten-title">Kahlua coffee</p>
+                            <p class="menu__list-iten-description">Classic coffee with milk and Kahlua liqueur under a
+                                cap
+                                of
+                                frothed milk</p>
+                            <p class="menu__list-iten-price">$7.00</p>
+                        </div>
+                    </li>
+                    <li class="menu__list-item">
+                        <div class="menu__img-wrapper">
+                            <img class="menu__list-item-img" src="images/coffee/coffee-3.jpg" alt="Honey raf">
+                        </div>
+                        <div class="menu__list-item-description-wrapper">
+                            <p class="menu__list-iten-title">Honey raf</p>
+                            <p class="menu__list-iten-description">Espresso with frothed milk, cream and aromatic honey
+                            </p>
+                            <p class="menu__list-iten-price">$5.50</p>
+                        </div>
+                    </li>
+                    <li class="menu__list-item">
+                        <div class="menu__img-wrapper">
+                            <img class="menu__list-item-img" src="images/coffee/coffee-4.jpg" alt="Ice cappuccino">
+                        </div>
+                        <div class="menu__list-item-description-wrapper">
+                            <p class="menu__list-iten-title">Ice cappuccino</p>
+                            <p class="menu__list-iten-description">Cappuccino with soft thick foam in summer version
+                                with
+                                ice
+                            </p>
+                            <p class="menu__list-iten-price">$5.00</p>
+                        </div>
+                    </li>
+                    <li class="menu__list-item">
+                        <div class="menu__img-wrapper">
+                            <img class="menu__list-item-img" src="images/coffee/coffee-5.jpg" alt="Espresso">
+                        </div>
+                        <div class="menu__list-item-description-wrapper">
+                            <p class="menu__list-iten-title">Espresso</p>
+                            <p class="menu__list-iten-description">Classic black coffee</p>
+                            <p class="menu__list-iten-price">$4.50</p>
+                        </div>
+                    </li>
+                    <li class="menu__list-item">
+                        <div class="menu__img-wrapper">
+                            <img class="menu__list-item-img" src="images/coffee/coffee-6.jpg" alt="Latte">
+                        </div>
+                        <div class="menu__list-item-description-wrapper">
+                            <p class="menu__list-iten-title">Latte</p>
+                            <p class="menu__list-iten-description">Espresso coffee with the addition of steamed milk and
+                                dense
+                                milk foam</p>
+                            <p class="menu__list-iten-price">$5.50</p>
+                        </div>
+                    </li>
+                    <li class="menu__list-item">
+                        <div class="menu__img-wrapper">
+                            <img class="menu__list-item-img" src="images/coffee/coffee-7.jpg" alt="Latte macchiato">
+                        </div>
+                        <div class="menu__list-item-description-wrapper">
+                            <p class="menu__list-iten-title">Latte macchiato</p>
+                            <p class="menu__list-iten-description">Espresso with frothed milk and chocolate</p>
+                            <p class="menu__list-iten-price">$5.50</p>
+                        </div>
+                    </li>
+                    <li class="menu__list-item">
+                        <div class="menu__img-wrapper">
+                            <img class="menu__list-item-img" src="images/coffee/coffee-8.jpg" alt="Coffee with cognac">
+                        </div>
+                        <div class="menu__list-item-description-wrapper">
+                            <p class="menu__list-iten-title">Coffee with cognac</p>
+                            <p class="menu__list-iten-description">Fragrant black coffee with cognac and whipped cream
+                            </p>
+                            <p class="menu__list-iten-price">$6.50</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__wrapper-item">
+                    <h2 class="footer__title">Sip, Savor, Smile. <span class="footer__title--italic">It’s coffee
+                            time!</span></h2>
+                    <ul class="footer__social-list">
+                        <li class="footer__social-list-item">
+                            <a class="footer__social-link" href="">
+                                <svg class="footer__social-icon" width="24" height="24">
+                                    <use href="./images/sprite.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__social-list-item">
+                            <a class="footer__social-link" href="">
+                                <svg class="footer__social-icon" width="24" height="24">
+                                    <use href="./images/sprite.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__social-list-item">
+                            <a class="footer__social-link" href="">
+                                <svg class="footer__social-icon" width="24" height="24">
+                                    <use href="./images/sprite.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__wrapper-item">
+                    <p class="footer__address-title" id="contacts">Contact us</p>
+                    <address class="footer__address">
+                        <ul class="footer__address-list">
+                            <li class="footer__address-list-item">
+                                <a class="footer__address-link" href="">
+                                    <svg class="footer__address-icon" width="20" height="20">
+                                        <use href="./images/sprite.svg#icon-pin-alt"></use>
+                                    </svg>
+                                    8558 Green Rd., LA
+                                </a>
+                            </li>
+                            <li class="footer__address-list-item">
+                                <a class="footer__address-link" href="">
+                                    <svg class="footer__address-icon" width="20" height="20">
+                                        <use href="./images/sprite.svg#icon-phone"></use>
+                                    </svg>
+                                    +1 (603) 555-0123
+                                </a>
+                            </li>
+                            <li class="footer__address-list-item">
+                                <a class="footer__address-link" href="">
+                                    <svg class="footer__address-icon" width="20" height="20">
+                                        <use href="./images/sprite.svg#icon-clock"></use>
+                                    </svg>
+                                    Mon-Sat: 9:00 AM – 23:00 PM
+                                </a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

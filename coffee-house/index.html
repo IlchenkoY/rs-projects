@@ -27,13 +27,21 @@
                 </a>
                 <nav class="header__nav">
                     <ul class="header__nav-list">
-                        <li class="header__nav-list-item">Favorite coffee</li>
-                        <li class="header__nav-list-item">About</li>
-                        <li class="header__nav-list-item">Mobile app</li>
-                        <li class="header__nav-list-item">Contact us</li>
+                        <li class="header__nav-list-item">
+                            <a class="header__nav-list-link" href="#slider">Favorite coffee</a>
+                        </li>
+                        <li class="header__nav-list-item">
+                            <a class="header__nav-list-link" href="#about">About</a>
+                        </li>
+                        <li class="header__nav-list-item">
+                            <a class="header__nav-list-link" href="#app">Mobile app</a>
+                        </li>
+                        <li class="header__nav-list-item">
+                            <a class="header__nav-list-link" href="#contacts">Contact us</a>
+                        </li>
                     </ul>
                 </nav>
-                <a class="header__menu-link" href="/">Menu
+                <a class="header__menu-link" href="menu.html">Menu
                     <svg class="header__menu-link-img" width="20" height="20">
                         <use href="./images/sprite.svg#icon-coffee-cup"></use>
                     </svg>
@@ -53,137 +61,187 @@
                         House Resource is a popular
                         destination for coffee
                         lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</p>
-                    <a class="hero__menu-link" href="index.html">Menu</a>
+                    <a class="hero__menu-link" href="index.html">
+                        <p class="hero__menu-link-description">Menu</p>
+                        <svg class="hero__menu-link-img" width="20" height="20">
+                            <use href="./images/sprite.svg#icon-coffee-cup"></use>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>
         <!--FAVORITE COFFEE-->
-        <section class="favorite-coffee">
+        <section class="favorite-coffee" id="slider">
             <div class="container">
                 <h2 class="favorite-coffee__title">Choose your <span
                         class="favorite-coffee__title--italic">favorite</span> coffee</h2>
                 <div class="favorite-coffee__wrapper">
-                    <button type="button"></button>
+                    <button class="favorite-coffee__arrow-btn" type="button">
+                        <svg class="favorite-coffee__arrow-img" width="24" height="24">
+                            <use href="./images/sprite.svg#icon-arrow-left"></use>
+                        </svg>
+                    </button>
                     <div class="favorite-coffee__card">
                         <img class="favorite-coffee__card-img" src="images/favorite-coffee/coffee-slider-1.png"
                             alt="favorite coffee">
-                        <p>S’mores Frappuccino</p>
-                        <p>This new drink takes an espresso and mixes it with brown sugar and cinnamon before being
+                        <p class="favorite-coffee__card-title">S’mores Frappuccino</p>
+                        <p class="favorite-coffee__card-description">This new drink takes an espresso and mixes it with
+                            brown sugar and cinnamon before being
                             topped
                             with
                             oat milk.</p>
-                        <p>$5.50</p>
+                        <p class="favorite-coffee__card-price">$5.50</p>
                     </div>
-                    <button type="button"></button>
+                    <button class="favorite-coffee__arrow-btn" type="button">
+                        <svg class="favorite-coffee__arrow-img" width="24" height="24">
+                            <use href="./images/sprite.svg#icon-arrow-right"></use>
+                        </svg>
+                    </button>
                 </div>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                <ul class="favorite-coffee__pagination-list">
+                    <li class="favorite-coffee__pagination-list-item"></li>
+                    <li class="favorite-coffee__pagination-list-item"></li>
+                    <li class="favorite-coffee__pagination-list-item"></li>
                 </ul>
             </div>
         </section>
         <!--ABOUT-->
-        <section>
+        <section class="about" id="about">
             <div class="container">
-                <h2>Resource is <span>the perfect and cozy place</span> where you can enjoy a variety of hot beverages,
+                <h2 class="about__title">Resource is <span class="about__title--italic">the perfect and cozy
+                        place</span> where you can enjoy a
+                    variety of hot beverages,
                     relax,
                     catch up with friends, or
                     get some work done.</h2>
-                <div>
-                    <ul>
-                        <li>
-                            <img src="" alt="">
+                <div class="about__img-list-wrapper">
+                    <ul class="about__img-list--left">
+                        <li class="about__img-list-item--left">
+                            <div class="about__img-container--first"></div>
+                            <!-- <img class="about__img" src="images/about/about-1.jpg" alt="girl drinking coffee"> -->
                         </li>
-                        <li>
-                            <img src="" alt="">
+                        <li class="about__img-list-item--left">
+                            <div class="about__img-container--second"></div>
+                            <!-- <img class="about__img" src="images/about/about-2.jpg" alt="guy drinking coffee"> -->
                         </li>
-                        <li>
-                            <img src="" alt="">
+                    </ul>
+                    <ul class="about__img-list--right">
+                        <li class="about__img-list-item--right">
+                            <div class="about__img-container--third"></div>
+                            <!-- <img class="about__img" src="images/about/about-3.jpg" alt="a cup of coffee"> -->
                         </li>
-                        <li>
-                            <img src="" alt="">
+                        <li class="about__img-list-item--right">
+                            <div class="about__img-container--forth"></div>
+                            <!-- <img class="about__img" src="images/about/about-4.jpg" alt="guy drinking coffee"> -->
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
         <!--OUR APP-->
-        <section>
+        <section class="app" id="app">
             <div class="container">
-                <h2><span>Download</span> our apps to start ordering</h2>
-                <p>Download the Resource app today and experience the comfort of ordering your favorite coffee from
-                    wherever you are</p>
-                <ul>
-                    <li>
-                        <a href="">
-                            <svg>
-                                <use></use>
-                            </svg>
-                            <p>Available on the</p>
-                            <p>App Store</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <svg>
-                                <use></use>
-                            </svg>
-                            <p>Available on the</p>
-                            <p>Google Play</p>
-                        </a>
-                    </li>
-                </ul>
-                <img src="" alt="">
+                <div class="app__wrapper">
+                    <div class="app__wrapper-item">
+                        <h2 class="app__title"><span class="app__title--italic">Download</span> our apps to start
+                            ordering
+                        </h2>
+                        <p class="app__description">Download the Resource app today and experience the comfort of
+                            ordering your favorite coffee
+                            from
+                            wherever you are</p>
+                        <ul class="app__list">
+                            <li class="app__list-item">
+                                <a class="app__list-link" href="">
+                                    <svg class="app__link-img" width="36" height="36">
+                                        <use href="./images/sprite.svg#icon-app-store"></use>
+                                    </svg>
+                                    <div class="app__list-link-description-wrapper">
+                                        <p class="app__list-link-description--top">Available on the</p>
+                                        <p class="app__list-link-description--bottom">App Store</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="app__list-item">
+                                <a class="app__list-link" href="">
+                                    <svg class="app__link-img" width="36" height="36">
+                                        <use href="./images/sprite.svg#icon-google-play"></use>
+                                    </svg>
+                                    <div class="app__list-link-description-wrapper">
+                                        <p class="app__list-link-description--top">Available on the</p>
+                                        <p class="app__list-link-description--bottom">Google Play</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <img src="images/mobile-screen/mobile-screens.png" alt="mobile-screens">
+                </div>
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <h2><span>Sip, Savor, Smile. </span>It’s coffee time!</h2>
-            <ul>
-                <li>
-                    <a href="">
-                        <svg>
-                            <use></use>
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <svg>
-                            <use></use>
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <svg>
-                            <use></use>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-            <p>Contact us</p>
-            <address>
-                <ul>
-                    <li>
-                        <svg>
-                            <use></use>
-                        </svg>
-                    </li>
-                    <li>
-                        <svg>
-                            <use></use>
-                        </svg>
-                    </li>
-                    <li>
-                        <svg>
-                            <use></use>
-                        </svg>
-                    </li>
-                </ul>
-            </address>
+            <div class="footer__wrapper">
+                <div class="footer__wrapper-item">
+                    <h2 class="footer__title">Sip, Savor, Smile. <span class="footer__title--italic">It’s coffee
+                            time!</span></h2>
+                    <ul class="footer__social-list">
+                        <li class="footer__social-list-item">
+                            <a class="footer__social-link" href="">
+                                <svg class="footer__social-icon" width="24" height="24">
+                                    <use href="./images/sprite.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__social-list-item">
+                            <a class="footer__social-link" href="">
+                                <svg class="footer__social-icon" width="24" height="24">
+                                    <use href="./images/sprite.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__social-list-item">
+                            <a class="footer__social-link" href="">
+                                <svg class="footer__social-icon" width="24" height="24">
+                                    <use href="./images/sprite.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__wrapper-item">
+                    <p class="footer__address-title" id="contacts">Contact us</p>
+                    <address class="footer__address">
+                        <ul class="footer__address-list">
+                            <li class="footer__address-list-item">
+                                <a class="footer__address-link" href="">
+                                    <svg class="footer__address-icon" width="20" height="20">
+                                        <use href="./images/sprite.svg#icon-pin-alt"></use>
+                                    </svg>
+                                    8558 Green Rd., LA
+                                </a>
+                            </li>
+                            <li class="footer__address-list-item">
+                                <a class="footer__address-link" href="">
+                                    <svg class="footer__address-icon" width="20" height="20">
+                                        <use href="./images/sprite.svg#icon-phone"></use>
+                                    </svg>
+                                    +1 (603) 555-0123
+                                </a>
+                            </li>
+                            <li class="footer__address-list-item">
+                                <a class="footer__address-link" href="">
+                                    <svg class="footer__address-icon" width="20" height="20">
+                                        <use href="./images/sprite.svg#icon-clock"></use>
+                                    </svg>
+                                    Mon-Sat: 9:00 AM – 23:00 PM
+                                </a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
