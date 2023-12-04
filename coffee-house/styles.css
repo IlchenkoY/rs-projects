@@ -391,6 +391,7 @@ ul {
 /*============FOOTER============*/
 .footer__wrapper {
   display: flex;
+  align-items: center;
   height: 450px;
   border-radius: 40px;
   padding: 100px;
@@ -409,12 +410,15 @@ ul {
 .footer__social-list {
   display: flex;
 }
-.footer__wrapper-item {
+.footer__wrapper-item:first-child {
   display: flex;
   flex-direction: column;
   justify-content: center;
   max-width: 530px;
   margin-right: 100px;
+}
+.footer__wrapper-item:last-child {
+  height: 186px;
 }
 .footer__social-link {
   display: flex;
@@ -440,7 +444,7 @@ ul {
 .footer__address-title {
   font-size: 24px;
   line-height: 1.25;
-  margin-bottom: 38px;
+  margin-bottom: 36px;
 }
 .footer__address-icon {
   position: relative;
@@ -512,19 +516,18 @@ ul {
   background-color: var(--background-body);
   transition: 0.5s;
 }
-.filter__btn:hover {
+.filter__btn--current {
+  color: var(--text-light);
   border: 1px solid var(--background-container);
   background-color: var(--background-container);
 }
-.filter__btn:hover .filter__oder-list-item-description {
+.filter__btn:hover {
   color: var(--text-light);
+  border: 1px solid var(--background-container);
+  background-color: var(--background-container);
 }
 .filter__btn:hover .filter__oder-list-icon {
   background-color: var(--background-body);
-}
-.filter__btn--current {
-  border: 1px solid var(--background-container);
-  background-color: var(--background-container);
 }
 .filter__oder-list-icon {
   display: flex;
@@ -538,14 +541,6 @@ ul {
 }
 .filter__oder-list-icon--current {
   background-color: var(--background-body);
-}
-.filter__oder-list-item-description {
-  font-size: 16px;
-  line-height: 1.5;
-  transition: 0.5s;
-}
-.filter__oder-list-item-description--current {
-  color: var(--text-light);
 }
 /*============MENU > MENU============*/
 .menu {
