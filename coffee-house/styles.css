@@ -483,29 +483,30 @@ ul {
 .filter {
   margin-bottom: 40px;
 }
-.filter__wrapper {
+.menu__filter-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 40px;
 }
-.filter__title {
+.menu__filter-title {
   text-align: center;
   font-size: 60px;
   line-height: 1.25;
   max-width: 800px;
   margin-bottom: 40px;
 }
-.filter__title--italic {
+.menu__filter-title--italic {
   font-style: italic;
   color: var(--text-accent);
 }
-.filter__oder-list {
+.menu__filter-oder-list {
   display: flex;
 }
-.filter__oder-list-item:not(:last-child) {
+.menu__filter-oder-list-item:not(:last-child) {
   margin-right: 16px;
 }
-.filter__btn {
+.menu__filter-btn {
   display: flex;
   padding: 8px 16px 8px 8px;
   justify-content: center;
@@ -516,20 +517,20 @@ ul {
   background-color: var(--background-body);
   transition: 0.5s;
 }
-.filter__btn--current {
+.menu__filter-btn--current {
   color: var(--text-light);
   border: 1px solid var(--background-container);
   background-color: var(--background-container);
 }
-.filter__btn:hover {
+.menu__filter-btn:hover {
   color: var(--text-light);
   border: 1px solid var(--background-container);
   background-color: var(--background-container);
 }
-.filter__btn:hover .filter__oder-list-icon {
+.menu__filter-btn:hover .menu__filter-oder-list-icon {
   background-color: var(--background-body);
 }
-.filter__oder-list-icon {
+.menu__filter-oder-list-icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -539,7 +540,7 @@ ul {
   background-color: var(--border-light);
   transition: 0.5s;
 }
-.filter__oder-list-icon--current {
+.menu__filter-oder-list-icon--current {
   background-color: var(--background-body);
 }
 /*============MENU > MENU============*/
