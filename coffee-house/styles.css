@@ -141,7 +141,7 @@ ul {
   content: "";
   width: 100%;
   height: 2px;
-  bottom: -10px;
+  bottom: -5px;
   background-color: var(--background-backdrop);
 }
 .header__menu-link-img {
@@ -180,6 +180,8 @@ ul {
 .hero__wrapper {
   background-image: url(images/hero-desktop/img-hero.jpg);
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   height: 644px;
   border-radius: 40px;
   padding: 100px;
@@ -237,8 +239,6 @@ ul {
 @media screen and (width< 1440px) {
   .hero__wrapper {
     padding: 100px 60px;
-    background-position: center;
-    background-size: auto 644px;
   }
   .hero__menu-link-img {
     position: static;
