@@ -79,20 +79,15 @@ ul {
   margin: 0 auto;
   padding: 0 40px;
 }
-@media screen and (width<= 1440px) {
+@media screen and (width< 1440px) {
   .container {
     max-width: 768px;
   }
 }
-@media screen and (width<= 768px) {
+@media screen and (width< 768px) {
   .container {
     max-width: 380px;
     padding: 0 16px;
-  }
-}
-@media (hover: none) {
-  a:hover {
-    cursor: pointer;
   }
 }
 /*============HEADER============*/
@@ -169,7 +164,7 @@ ul {
 .header__nav-btm-icon--notdesktop {
   stroke: var(--text-dark);
 }
-@media screen and (width<= 1440px) {
+@media screen and (width< 1440px) {
   .header__nav--notdesktop {
     display: block;
   }
@@ -239,7 +234,7 @@ ul {
     opacity: 1;
   }
 }
-@media screen and (width<= 1440px) {
+@media screen and (width< 1440px) {
   .hero__wrapper {
     padding: 100px 60px;
     background-position: center;
@@ -253,7 +248,7 @@ ul {
     margin-right: 8px;
   }
 }
-@media screen and (width<= 768px) {
+@media screen and (width< 768px) {
   .hero__wrapper {
     height: 552px;
     padding: 60px 16px;
@@ -341,7 +336,7 @@ ul {
     stroke: var(--background-body);
   }
 }
-@media screen and (width<= 768px) {
+@media screen and (width< 768px) {
   .favorite-coffee__title {
     font-size: 32px;
   }
@@ -408,7 +403,7 @@ ul {
     transform: scale(1);
   }
 }
-@media screen and (width<= 1440px) {
+@media screen and (width< 1440px) {
   .about__img {
     position: absolute;
     top: 50%;
@@ -435,7 +430,7 @@ ul {
     height: 1220px;
   }
 }
-@media screen and (width<= 768px) {
+@media screen and (width< 768px) {
   .about__title {
     font-size: 32px;
   }
@@ -509,7 +504,7 @@ ul {
     fill: var(--text-light);
   }
 }
-@media screen and (width<= 1440px) {
+@media screen and (width< 1440px) {
   .app__wrapper {
     flex-direction: column;
   }
@@ -522,7 +517,7 @@ ul {
     margin: 0 auto;
   }
 }
-@media screen and (width<= 768px) {
+@media screen and (width< 768px) {
   .app__wrapper {
     gap: 40px;
   }
@@ -631,7 +626,7 @@ ul {
     transform: scale(1);
   }
 }
-@media screen and (width<= 1440px) {
+@media screen and (width< 1440px) {
   .footer__wrapper {
     align-items: start;
     padding: 100px 60px;
@@ -642,7 +637,7 @@ ul {
     margin: 0 0 100px 0;
   }
 }
-@media screen and (width<= 768px) {
+@media screen and (width< 768px) {
   .footer__title {
     font-size: 32px;
   }
@@ -772,7 +767,7 @@ ul {
     background-color: var(--background-body);
   }
 }
-@media screen and (width<= 1440px) {
+@media screen and (width< 1440px) {
   .menu__btn {
     display: flex;
     margin-left: auto;
@@ -796,7 +791,7 @@ ul {
     display: none;
   }
 }
-@media screen and (width<= 768px) {
+@media screen and (width< 768px) {
   .menu__filter-title {
     font-size: 32px;
   }
