@@ -79,20 +79,15 @@ ul {
   margin: 0 auto;
   padding: 0 40px;
 }
-@media screen and (width<= 1440px) {
+/* @media screen and (width< 1440px) {
   .container {
     max-width: 768px;
   }
-}
-@media screen and (width<= 768px) {
+} */
+@media screen and (width< 768px) {
   .container {
     max-width: 380px;
     padding: 0 16px;
-  }
-}
-@media (hover: none) {
-  a:hover {
-    cursor: pointer;
   }
 }
 /*============HEADER============*/
@@ -112,10 +107,6 @@ ul {
 }
 .header__nav-list-link {
   position: relative;
-}
-.header__nav-list-link:hover::before,
-.header__menu-link:hover::before {
-  transform: scaleX(1);
 }
 .header__nav-list-link::before,
 .header__menu-link::before {
@@ -146,7 +137,7 @@ ul {
   content: "";
   width: 100%;
   height: 2px;
-  bottom: -10px;
+  bottom: -5px;
   background-color: var(--background-backdrop);
 }
 .header__menu-link-img {
@@ -169,7 +160,13 @@ ul {
 .header__nav-btm-icon--notdesktop {
   stroke: var(--text-dark);
 }
-@media screen and (width<= 1440px) {
+@media ((hover: hover) and (pointer: fine)) {
+  .header__nav-list-link:hover::before,
+  .header__menu-link:hover::before {
+    transform: scaleX(1);
+  }
+}
+@media screen and (width< 1100px) {
   .header__nav--notdesktop {
     display: block;
   }
@@ -185,6 +182,8 @@ ul {
 .hero__wrapper {
   background-image: url(images/hero-desktop/img-hero.jpg);
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   height: 644px;
   border-radius: 40px;
   padding: 100px;
@@ -227,7 +226,7 @@ ul {
   transition: 0.5s;
   opacity: 0;
 }
-@media screen and (width>= 1440px) {
+@media ((hover: hover) and (pointer: fine)) {
   .hero__menu-link-description {
     transform: translatex(0);
     transition: 0.5s;
@@ -239,11 +238,9 @@ ul {
     opacity: 1;
   }
 }
-@media screen and (width<= 1440px) {
+@media screen and (width< 1440px) {
   .hero__wrapper {
     padding: 100px 60px;
-    background-position: center;
-    background-size: auto 644px;
   }
   .hero__menu-link-img {
     position: static;
@@ -253,7 +250,7 @@ ul {
     margin-right: 8px;
   }
 }
-@media screen and (width<= 768px) {
+@media screen and (width< 768px) {
   .hero__wrapper {
     height: 552px;
     padding: 60px 16px;
@@ -333,7 +330,7 @@ ul {
 .favorite-coffee__pagination-list-item:not(:last-child) {
   margin-right: 12px;
 }
-@media screen and (width>= 1440px) {
+@media ((hover: hover) and (pointer: fine)) {
   .favorite-coffee__arrow-btn:hover {
     background-color: var(--border-dark);
   }
@@ -341,7 +338,7 @@ ul {
     stroke: var(--background-body);
   }
 }
-@media screen and (width<= 768px) {
+@media screen and (width< 768px) {
   .favorite-coffee__title {
     font-size: 32px;
   }
@@ -395,27 +392,26 @@ ul {
 .about__img-list-item--right:nth-child(1) {
   height: 430px;
 }
-@media screen and (width>= 1440px) {
-  .about__img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    transition: 0.5s;
-    transform: scale(1.1);
-  }
+.about__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+@media ((hover: hover) and (pointer: fine)) {
   .about__img-list-item--left:hover .about__img,
   .about__img-list-item--right:hover .about__img {
     transform: scale(1);
   }
 }
-@media screen and (width<= 1440px) {
+@media screen and (width< 1440px) {
   .about__img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 726px;
-    height: 726px;
+    transform: scale(1.05);
+  }
+  .about__img-list-wrapper {
+    flex-direction: row;
+    justify-content: center;
   }
   .about__img-list-item--left:last-child {
     display: none;
@@ -428,14 +424,16 @@ ul {
   }
   .about__img-list-item--left,
   .about__img-list-item--right {
-    position: relative;
     width: 688px;
   }
   .about__img-list-wrapper {
     height: 1220px;
   }
 }
-@media screen and (width<= 768px) {
+@media screen and (width< 768px) {
+  .about__img {
+    transform: scale(1.22);
+  }
   .about__title {
     font-size: 32px;
   }
@@ -500,7 +498,7 @@ ul {
   fill: var(--text-dark);
   transition: 0.5s;
 }
-@media screen and (width>= 1440px) {
+@media ((hover: hover) and (pointer: fine)) {
   .app__list-link:hover {
     color: var(--text-light);
     background-color: var(--background-container);
@@ -509,7 +507,7 @@ ul {
     fill: var(--text-light);
   }
 }
-@media screen and (width<= 1440px) {
+@media screen and (width< 1440px) {
   .app__wrapper {
     flex-direction: column;
   }
@@ -522,7 +520,7 @@ ul {
     margin: 0 auto;
   }
 }
-@media screen and (width<= 768px) {
+@media screen and (width< 768px) {
   .app__wrapper {
     gap: 40px;
   }
@@ -620,7 +618,7 @@ ul {
   transform: scale(0);
   transition: 0.5s;
 }
-@media screen and (width>= 1440px) {
+@media ((hover: hover) and (pointer: fine)) {
   .footer__social-link:hover {
     background-color: var(--background-body);
   }
@@ -631,7 +629,7 @@ ul {
     transform: scale(1);
   }
 }
-@media screen and (width<= 1440px) {
+@media screen and (width< 1100px) {
   .footer__wrapper {
     align-items: start;
     padding: 100px 60px;
@@ -642,7 +640,7 @@ ul {
     margin: 0 0 100px 0;
   }
 }
-@media screen and (width<= 768px) {
+@media screen and (width< 768px) {
   .footer__title {
     font-size: 32px;
   }
@@ -714,6 +712,7 @@ ul {
 /*============MENU > MENU============*/
 .menu__list {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
 }
@@ -759,7 +758,7 @@ ul {
 .menu__btn {
   display: none;
 }
-@media screen and (width>= 1440px) {
+@media ((hover: hover) and (pointer: fine)) {
   .menu__list-item:hover .menu__list-item-img {
     transform: scale(1);
   }
@@ -772,7 +771,7 @@ ul {
     background-color: var(--background-body);
   }
 }
-@media screen and (width<= 1440px) {
+@media screen and (width< 1090px) {
   .menu__btn {
     display: flex;
     margin-left: auto;
@@ -789,14 +788,13 @@ ul {
     stroke: var(--text-dark);
   }
   .menu__list {
-    justify-content: center;
     margin-bottom: 40px;
   }
   .menu__list-item:nth-child(n + 5) {
     display: none;
   }
 }
-@media screen and (width<= 768px) {
+@media screen and (width< 768px) {
   .menu__filter-title {
     font-size: 32px;
   }
