@@ -42,10 +42,11 @@ function createMarkup(products) {
 function createProductsListMarkup(products, choice) {
   return products
     .filter(product => product.category === choice)
-    .map(({ name, description, price, img }) => {
+    .map(({ name, description, price, img, id }) => {
       return `
-      <li class="menu__list-item">
-              <div class="menu__img-wrapper">
+      <li class="menu__list-item data-id="${id}">
+            <div class="menu__card-wrapper" data-id="${id}">
+                <div class="menu__img-wrapper">
                   <img class="menu__list-item-img" src="${img}" loading="lazy" alt="${name}">
               </div>
               <div class="menu__list-item-description-wrapper">
@@ -53,6 +54,7 @@ function createProductsListMarkup(products, choice) {
                   <p class="menu__list-iten-description">${description}</p>
                   <p class="menu__list-iten-price">$${price}</p>
               </div>
+            </div>
       </li>
     `;
     })
