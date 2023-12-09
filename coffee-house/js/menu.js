@@ -9,7 +9,7 @@ menuNavList.addEventListener("click", toggleMenuHandler);
 menuNavLink.addEventListener("click", toggleMenuHandler);
 
 function toggleMenuHandler() {
-  //   window.addEventListener("resize", () => location.reload());
+  window.addEventListener("resize", () => location.reload());
   menu.classList.toggle("is-open");
   menuBtn.classList.toggle("is-open");
   menuWrapper.classList.toggle("is-open");
