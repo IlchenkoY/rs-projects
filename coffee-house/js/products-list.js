@@ -1,4 +1,4 @@
-import productsLst from "../data/products.json" assert { type: "json" };
+import productsData from "../data/products.json" assert { type: "json" };
 
 const productsList = document.querySelector(".menu__list");
 const filter = document.querySelector(".menu__filter-oder-list");
@@ -19,10 +19,8 @@ function addCurrenFilter(currentBtn) {
 }
 
 function filterHandler(e) {
-  if (productsLst.length > 4) {
-    if (loadMoreBtn.classList.contains("none")) {
-      loadMoreBtn.classList.remove("none");
-    }
+  if (loadMoreBtn.classList.contains("none")) {
+    loadMoreBtn.classList.remove("none");
   }
   addCurrenFilter(e.target);
   choice = e.target.id;
@@ -62,24 +60,22 @@ function createProductsListMarkup(products, choice) {
 }
 
 function loadMoreHandler() {
-  createMarkup(productsLst);
+  createMarkup(productsData);
 }
 
 function checkMediaQuery(media) {
-  if (productsLst.length > 4) {
-    if (loadMoreBtn.classList.contains("none")) {
-      loadMoreBtn.classList.remove("none");
-    }
+  if (loadMoreBtn.classList.contains("none")) {
+    loadMoreBtn.classList.remove("none");
   }
   if (media.matches) {
-    let filterProductsByMedia = productsLst.filter(
+    let filterProductsByMedia = productsData.filter(
       product => product.category === choice,
     );
     filterProductsByMedia.length = 4;
     createMarkup(filterProductsByMedia);
     return;
   }
-  createMarkup(productsLst);
+  createMarkup(productsData);
 }
 
 checkMediaQuery(breakpoint);
