@@ -1,4 +1,4 @@
-import productsLst from "../data/products.json" assert { type: "json" };
+import productsData from "../data/products.json" assert { type: "json" };
 
 export default function createPproductCardMarkup(id) {
   const {
@@ -8,7 +8,7 @@ export default function createPproductCardMarkup(id) {
     price,
     sizes: { s, m, l },
     additives,
-  } = productsLst.filter(el => el.id.toString() === id)[0];
+  } = productsData.filter(el => el.id.toString() === id)[0];
   const [additive1, additive2, additive3] = additives;
   return `
             <div class="modal__img-wrapper">
