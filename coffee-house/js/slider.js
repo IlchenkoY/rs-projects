@@ -51,7 +51,6 @@ function autoscroll() {
   let firstImgWidth = firstImg.clientWidth;
   coffeeListLength += firstImgWidth;
   index += 1;
-  console.log(index);
   if (index > 2) {
     index = 0;
     paginationItemsList[2].classList.remove("current");
