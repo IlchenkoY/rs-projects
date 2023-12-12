@@ -3,11 +3,11 @@ const modal = document.querySelector(".modal");
 const backdrop = document.querySelector(".backdrop");
 const productList = document.querySelector(".menu__list");
 
-let currentOrderId;
-let order;
-let preSize = "s";
-let preBtnId = 1;
 let preBtn;
+let order;
+let priceS;
+let modalPrice;
+let size;
 
 backdrop.addEventListener("click", closeModalHandler);
 productList.addEventListener("click", openModalHandler);
@@ -21,8 +21,13 @@ function openModalHandler(e) {
   modal.innerHTML = createPproductCardMarkup(productId);
   window.addEventListener("keydown", escKeyHandler);
   toggleModal();
+  order = {};
+  modalPrice = document.querySelector(".modal__price");
+  priceS = Number(modalPrice.textContent.slice(1));
   preBtn = document.querySelector(".modal__item-btn");
-  order = new Map();
+  preBtn.classList.add("current");
+
+  order = { basePrice: priceS, sizeAddedPrise: 0, additives: {} };
 }
 
 function toggleModal() {
@@ -47,52 +52,49 @@ function closeModalHandler(e) {
   }
 }
 
-function currenOrderBtn(currentBtn, preBtn) {
-  preBtn.classList.remove("current");
-  currentBtn.classList.add("current");
-}
-
 function choiceHandler(e) {
   if (
     e.target.matches(".modal__item-btn") ||
     e.target.matches(".modal__list-item-element")
   ) {
-    const modalPrice = document.querySelector(".modal__price");
     let orderBtn = e.target.closest(".modal__item-btn");
-    let basePrice = Number(modalPrice.textContent.slice(1));
-    order.set(1, basePrice);
-    let currentPrice =
-      Number(e.target.dataset.price) ||
-      Number(e.target.closest(".modal__item-btn").dataset.price);
+    let totalPrice = order.basePrice + order.sizeAddedPrise;
 
-    if (e.target.closest(".modal__item-btn").dataset.size) {
+    if (e.target.closest(".modal__item-btn").dataset.id < 4) {
+      size = orderBtn.dataset.size;
       if (orderBtn !== preBtn) {
         preBtn.classList.remove("current");
+        orderBtn.classList.add("current");
         preBtn = orderBtn;
+        order.sizeAddedPrise = Number(orderBtn.dataset.price);
       }
+
+      totalPrice =
+        Object.values(order.additives).length > 0
+          ? order.basePrice +
+            order.sizeAddedPrise +
+            Object.values(order.additives).reduce((pre, el) => pre + el)
+          : order.basePrice + order.sizeAddedPrise;
     }
 
-    currentOrderId =
-      Number(e.target.dataset.id) ||
-      Number(e.target.closest(".modal__item-btn").dataset.id);
-
-    if (order.has(currentOrderId)) {
-      orderBtn.classList.remove("current");
-      order.set(currentOrderId, basePrice);
-      console.log(order);
-      basePrice -= currentPrice;
-      order.delete(currentOrderId);
-    } else {
-      orderBtn.classList.add("current");
-      order.set(currentOrderId, basePrice);
-      console.log(order);
-      basePrice += currentPrice;
-      order.set(currentOrderId, basePrice);
+    if (e.target.closest(".modal__item-btn").dataset.id > 3) {
+      e.target.closest(".modal__item-btn").classList.toggle("current");
+      let additive = orderBtn.textContent.slice(1).toLowerCase();
+      order.additives[additive]
+        ? delete order.additives[additive]
+        : (order.additives[additive] = Number(
+            e.target.closest(".modal__item-btn").dataset.price,
+          ));
+      totalPrice =
+        Object.values(order.additives).length > 0
+          ? (totalPrice += Object.values(order.additives).reduce(
+              (pre, el) => pre + el,
+            ))
+          : (totalPrice += 0);
     }
 
-    let integer = String(basePrice).split(".")[0];
-    let fractional = String(basePrice).split(".")[1] || 0;
-
+    let integer = String(totalPrice).split(".")[0];
+    let fractional = String(totalPrice).split(".")[1] || 0;
     modalPrice.textContent = `$${String(integer)}.${String(fractional).padEnd(
       2,
       "0",

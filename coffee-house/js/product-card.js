@@ -19,7 +19,7 @@ export default function createPproductCardMarkup(id) {
                 <p class="modal__description">${description}</p>
                 <p class="modal__sizes-title">Size</p>
                 <ul class="modal__sizes-list">
-                    <li class="modal__list-item"><button class="modal__item-btn current" data-price="${s["add-price"]}" data-id="1" data-size="s"><span class="modal__list-item-element">S</span>${s.size}</button></li>
+                    <li class="modal__list-item"><button class="modal__item-btn" data-price="${s["add-price"]}" data-id="1" data-size="s"><span class="modal__list-item-element">S</span>${s.size}</button></li>
                     <li class="modal__list-item"><button class="modal__item-btn" data-price="${m["add-price"]}" data-id="2" data-size="m"><span class="modal__list-item-element">M</span>${m.size}</button></li>
                     <li class="modal__list-item"><button class="modal__item-btn" data-price="${l["add-price"]}" data-id="3" data-size="l"><span class="modal__list-item-element">L</span>${l.size}</button></li>
                 </ul>
