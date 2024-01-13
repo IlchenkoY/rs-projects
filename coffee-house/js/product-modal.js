@@ -7,7 +7,6 @@ let preBtn;
 let order;
 let priceS;
 let modalPrice;
-let size;
 
 backdrop.addEventListener("click", closeModalHandler);
 productList.addEventListener("click", openModalHandler);
