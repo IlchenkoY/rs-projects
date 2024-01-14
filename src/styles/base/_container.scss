@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-width: 320px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 10px;
+
+  @media screen and (width >=getBreakpoint('tablet')) {
+    & {
+      flex-direction: row;
+      gap: 50px;
+      padding: 30px;
+    }
+  }
+
+  @media screen and (width >=getBreakpoint('desktop')) {
+    & {
+      gap: 100px;
+      padding: 40px;
+    }
+  }
+}

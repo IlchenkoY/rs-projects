@@ -1,0 +1,286 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Smokum", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #3a160e;
+  background-color: rgb(217, 215, 199);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: inherit;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+button {
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-width: 320px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 10px;
+}
+@media screen and (width >= 768px) {
+  .container {
+    flex-direction: row;
+    gap: 50px;
+    padding: 30px;
+  }
+}
+@media screen and (width >= 1440px) {
+  .container {
+    gap: 100px;
+    padding: 40px;
+  }
+}
+
+.gallow {
+  text-align: center;
+}
+
+.gallow__img {
+  height: 300px;
+  margin-bottom: 30px;
+}
+@media screen and (height <= 450px) {
+  .gallow__img {
+    height: 200px;
+  }
+}
+@media screen and (width >= 1440px) {
+  .gallow__img {
+    height: 400px;
+  }
+}
+
+.gallow__title {
+  font-size: 55px;
+  color: rgb(58, 22, 14);
+}
+@media screen and (width >= 1440px) {
+  .gallow__title {
+    font-size: 75px;
+  }
+}
+
+.quiz {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+}
+@media screen and (width >= 1440px) {
+  .quiz {
+    gap: 40px;
+    width: 400px;
+  }
+}
+
+.quiz__word-list {
+  display: flex;
+  gap: 10px;
+}
+@media screen and (width >= 1440px) {
+  .quiz__word-list {
+    gap: 15px;
+  }
+}
+
+.quiz__word-item {
+  width: 30px;
+  height: 50px;
+  border-bottom: 3px solid;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.quiz__word-item--quessed {
+  border-color: transparent;
+  line-height: 1.7;
+}
+@media screen and (width >= 1440px) {
+  .quiz__word-item {
+    width: 40px;
+  }
+}
+
+.quiz__hint,
+.quiz__incorrect-counter {
+  font-size: 30px;
+}
+@media screen and (width >= 1440px) {
+  .quiz__hint,
+  .quiz__incorrect-counter {
+    font-size: 40px;
+  }
+}
+
+.quiz__incorrect-count {
+  color: rgb(158, 61, 45);
+}
+
+.quiz__letter-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  max-width: 300px;
+}
+@media screen and (width >= 1440px) {
+  .quiz__letter-list {
+    gap: 10px;
+    max-width: 400px;
+  }
+}
+
+.quiz__letter {
+  cursor: pointer;
+  width: 28px;
+  font-size: 30px;
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.45);
+  transition: box-shadow 0.3s ease;
+}
+@media ((hover: hover) and (pointer: fine)) {
+  .quiz__letter:hover {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.45);
+  }
+}
+@media screen and (width >= 1440px) {
+  .quiz__letter {
+    width: 35px;
+  }
+}
+
+.modal-backdrop {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border: 20px solid rgb(48, 14, 8);
+  background-color: rgb(217, 215, 199);
+  width: 300px;
+  height: 400px;
+  border-radius: 15px;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (width >= 768px) {
+  .modal {
+    width: 400px;
+  }
+}
+@media screen and (width >= 1440px) {
+  .modal {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+.modal__title {
+  font-size: 60px;
+  margin-top: 50px;
+}
+@media screen and (width >= 1440px) {
+  .modal__title {
+    font-size: 80px;
+  }
+}
+
+.modal-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+}
+@media screen and (width >= 1440px) {
+  .modal-description {
+    font-size: 50px;
+  }
+}
+
+.modal-word {
+  font-size: 40px;
+}
+@media screen and (width >= 1440px) {
+  .modal-word {
+    font-size: 60px;
+  }
+}
+
+.modal-btn {
+  cursor: pointer;
+  font-size: 25px;
+  width: 150px;
+  height: 50px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.45);
+  transition: box-shadow 0.3s ease;
+}
+.modal-btn:hover {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.45);
+}
+@media screen and (width >= 1440px) {
+  .modal-btn {
+    font-size: 45px;
+    width: 200px;
+    height: 80px;
+    border: 2px solid;
+  }
+}/*# sourceMappingURL=main.css.map */
