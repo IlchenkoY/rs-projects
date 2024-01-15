@@ -183,10 +183,8 @@ p {
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.45);
   transition: box-shadow 0.3s ease;
 }
-@media ((hover: hover) and (pointer: fine)) {
-  .quiz__letter:hover {
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.45);
-  }
+.quiz__letter:hover {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.45);
 }
 @media screen and (width >= 1440px) {
   .quiz__letter {
