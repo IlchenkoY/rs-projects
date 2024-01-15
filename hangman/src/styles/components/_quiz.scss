@@ -16,11 +16,14 @@
 
 .quiz__word-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
+  max-width: 300px;
 
   @media screen and (width>=getBreakpoint('desktop')) {
     & {
       gap: 15px;
+      max-width: 400px;
     }
   }
 }
