@@ -23,8 +23,9 @@ export default function gameSettingsMarkup(size) {
                     <label for="size">Сhoose picture</label>
                     <select class="settings-select" id="picture" name="picture">
                     </select>
-                   <button type="submit">Play</button>
-                   <button class="give-up" type="button" disabled>Give Up</button> 
+                   <button class="play" type="submit">Play</button>
+                   <button class="give-up" type="button" disabled>Give Up</button>
+                   <button class="reset" type="button" disabled>Reset</button> 
                   </form>`;
   body.insertAdjacentHTML("afterbegin", markup);
   selectMarkup(size);

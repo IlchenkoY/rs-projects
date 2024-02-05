@@ -1,29 +1,40 @@
-import imageMatrices from "../../data/image-matrices";
-import gameSettingsMarkup from "./game-settings-markup";
-import picturesGridMarkup from "./pictures-grid";
-import generateGrid from "./generate-grid";
+import { imageMatrices, templates } from "../../data/image-matrices";
+import gameSettingsMarkup from "./settings-markup";
+import generateGrid from "./grid-markup";
+import { gameStatus } from "./game-status";
 
 const gameForm = document.querySelector(".game-settings");
+const giveUpBtn = document.querySelector(".give-up");
+const resetBtn = document.querySelector(".reset");
+const playBtn = document.querySelector(".play");
+const radioBtnList = document.querySelectorAll(".game-settings-radio");
+let selectedPictureMatrix;
 let size = "5";
 
 gameForm.addEventListener("change", settingsChangeHandler);
-gameForm.addEventListener("submit", settingsHandler);
+gameForm.addEventListener("submit", startGameHandler);
 
 function settingsChangeHandler(e) {
   if (e.target.nodeName !== "INPUT") {
     return;
   }
   size = e.target.value;
-  if (e.target.nodeName === "INPUT") {
-    gameSettingsMarkup(size);
-  }
+  generateGrid(templates[size], "template");
+  gameSettingsMarkup(size);
 }
 
-function settingsHandler(e) {
+function startGameHandler(e) {
   e.preventDefault();
+
+  const firstClick = true;
   const form = e.target;
   const selectedPicture = form.elements.picture.value;
-  const selectedPictureMatrix = imageMatrices[size][selectedPicture];
-  // generateGrid(size);
-  picturesGridMarkup(selectedPictureMatrix);
+  selectedPictureMatrix = imageMatrices[size][selectedPicture];
+  giveUpBtn.disabled = false;
+  resetBtn.disabled = false;
+  generateGrid(selectedPictureMatrix);
+  const gameContainer = document.querySelector(".main");
+  gameStatus(gameContainer, selectedPictureMatrix, size, firstClick);
+  radioBtnList.forEach((el) => (el.disabled = true));
+  playBtn.disabled = true;
 }

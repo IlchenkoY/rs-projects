@@ -2,79 +2,11 @@
 @import './base/common';
 @import './base/container';
 
-.main-section {
-  display: flex;
-}
-
-.row {
-  display: flex;
-
-  &:nth-child(5n + 5) {
-    border-bottom: 1px solid #7b7a7a;
-  }
-}
-
-.cell {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-
-  &:nth-child(5n + 5) {
-    border-right: 1px solid #7b7a7a;
-  }
-}
-
-.clue-cell {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #ccc;
-  background-color: #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &:nth-child(5n + 5) {
-    border-bottom: 1px solid #7b7a7a;
-    height: 31px;
-  }
-}
-
-.top-clue-cell {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #ccc;
-  background-color: #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &:nth-child(5n + 5) {
-    border-right: 1px solid #7b7a7a;
-  }
-}
-
-.top-left-cell {
-  width: 32px;
-  height: 30px;
-  border: 1px solid #ccc;
-  border-right: 2px solid #333;
-  background-color: #eee;
-}
-
-.top-clues {
-  border-bottom: 2px solid #333;
-}
-
-.left-clues {
-  border-right: 2px solid #333;
-}
-
-@media (max-width: 500px) {
-
-  .cell,
-  .clue-cell {
-    width: 20px;
-    height: 20px;
-  }
-}
+//components
+@import './components/game-settings';
+@import './components/cell';
+@import './components/row';
+@import './components/col-hints';
+@import './components/modal';
+@import './components/wrapper';
+@import './components/timer';
