@@ -1,0 +1,15 @@
+.col-hints {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border-bottom: 2px solid #333;
+  background-color: yellowgreen;
+
+  &>.col:nth-child(1) {
+    border-left: 2px solid #333;
+  }
+}
+
+.col:nth-child(5n + 5):not(:last-child)>.cell {
+  border-right: 2px solid #4c4c4c;
+}
