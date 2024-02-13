@@ -3,4 +3,3 @@ import "../scss/main.scss";
 import "./init-game";
 import "./game-settings";
 import "./game-status";
-import "./timer";

@@ -33,13 +33,6 @@ export default function generateGrid(imageMatrix, identifier) {
                 <div class="row-hints">${hintsMarkup}</div>
                 <div class="row-pict">${cellsMarkup}</div>
               </div>`;
-
-    // return identifier === "template"
-    //   ? `<div class="row">${cellsMarkup}</div>`
-    //   : `<div class="row">
-    //       <div class="row-hints">${hintsMarkup}</div>
-    //       <div class="row-pict">${cellsMarkup}</div>
-    //     </div>`;
   });
 
   const colHintsMarkup = colHints.map((colHint) => {

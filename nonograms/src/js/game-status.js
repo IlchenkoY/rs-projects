@@ -4,7 +4,8 @@ import generateGrid from "./grid-markup";
 
 let currentArr;
 let firstClick;
-let timer = null;
+let timerId;
+let timer;
 let matrix;
 const giveUpBtn = document.querySelector(".give-up");
 const playBtn = document.querySelector(".play");
@@ -42,10 +43,11 @@ function gameStatus(container, currentMatrix, size, clickStatus) {
       );
     }
   }
+
   function gameStatusHandler(e) {
     if (firstClick) {
-      timer = createCountdownTimer(Date.now());
-      timer.start();
+      timer = new createCountdownTimer(Date.now());
+      timerId = timer.start();
     }
     if (e.target.className !== "cell-pict") {
       return;
@@ -76,7 +78,7 @@ function checkStatus(currentCell, flatMatrix, modalBackdrop, size) {
     const modalTitle = document.querySelector(".modal__title");
     modalBackdrop.style.display = "block";
     modalTitle.textContent = `Great! You have solved the nonogram in ${timer.getTime()} seconds!`;
-    timer.stop();
+    timer.stop(timerId);
     const modalBtn = document.querySelector(".modal-btn");
     modalBtn.addEventListener("click", () => resetGameHandler(size, timer));
     firstClick = true;
@@ -93,7 +95,7 @@ function reset(identifier) {
   radioBtnList.forEach((el) => (el.disabled = false));
   playBtn.disabled = false;
   if (timer) {
-    timer.stop();
+    timer.stop(timerId);
   }
   timerEl.forEach((el) => (el.textContent = "00"));
   firstClick = true;
